@@ -89,7 +89,7 @@ public class ep01_PrimerExamenParcial {
             System.out.println("\nEl evento concluye con BUENAS ganancias.");
         }
         obj.close();
-        
+
 
     }
 }
