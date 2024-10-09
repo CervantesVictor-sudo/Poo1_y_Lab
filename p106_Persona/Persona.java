@@ -1,12 +1,12 @@
 package p106_Persona;
 
 public class Persona {
-    private String Nombre;
+    private String Nombre;    
     private String Direccion;
     private int Edad;
 
-    public Persona () {}
-    public Persona (String nombre, String direccion, int edad) {
+    public Persona() {}
+    public Persona(String nombre, String direccion, int edad)    {
         Nombre = nombre;
         Direccion = direccion;
         Edad = edad;
@@ -29,7 +29,9 @@ public class Persona {
     public void setEdad(int edad) {
         Edad = edad;
     }
+    
+    @Override
     public String toString() {
-        return "Nombre= " + Nombre + ", Direccion= " + Direccion + ", Edad= " + Edad;
+        return "Persona [Nombre=" + Nombre + ", Direccion=" + Direccion + ", Edad=" + Edad + "]";
     }
 }

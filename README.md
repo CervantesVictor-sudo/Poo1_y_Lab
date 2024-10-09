@@ -141,3 +141,7 @@
 - p91_MayoresPromedio
 - p92_MayorMenor
 - p93_ParesImpares 
+
+## Actividad 17 - Herencia y Abstracción
+- p106_Persona
+- p107_Forma
