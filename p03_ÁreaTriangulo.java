@@ -14,7 +14,6 @@ public class p03_ÁreaTriangulo {
         base = obj.nextInt();
         System.out.print("Dame la altura: ");
         altura = obj.nextInt();
-
         area = ( base * altura ) / 2;
 
         System.out.println("Para un triangulo con base de " + base + " y altura de " + altura + ", el área es de: " + area);

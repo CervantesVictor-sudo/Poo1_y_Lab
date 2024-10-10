@@ -11,7 +11,6 @@ public class p02_ÁreaCírculo {
         System.out.println("\nCalculando el área de un círculo/n");
         System.err.print("Dame el radio del círculo: ");
         radio = lradio.nextFloat();
-
         area = Math.PI * Math.pow(radio, 2);
 
         System.out.println("\nEl círculo con radio de " + radio + " tiene un área de " + area);
