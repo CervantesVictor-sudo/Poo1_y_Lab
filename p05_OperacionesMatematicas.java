@@ -18,6 +18,5 @@ public class p05_OperacionesMatematicas {
         System.out.println(String.format("El de la Suma: %.2f\nEl de la Resta: %.2f",suma,resta));
         System.out.println(String.format("El de la Multiplicacion: %.2f\nEl de la Division: %.2f",multi,div));
         System.out.println(String.format("El del Residuo: %.2f\nEl de la Potencia: %.2f",res,pot));
-
     }
 }

@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class p06_PromedioCalificaciones {
     public static void main(String[] args) {
+        
         float cal1, cal2, cal3, suma, prom, min, max;
         cal1 = cal2 = cal3 = 0;
         Scanner obj = new Scanner(System.in);
