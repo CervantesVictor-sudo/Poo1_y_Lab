@@ -18,5 +18,4 @@ public class p12_ConvertirTemperatura {
         System.out.println(String.format("\nSi la temperatura en grados Fahrenheit es de: %.2f", fahrenheit));
         System.out.println(String.format("\nLa temperatura en grados Celsius es de: %.2f", celsius));
     }
-    
 }

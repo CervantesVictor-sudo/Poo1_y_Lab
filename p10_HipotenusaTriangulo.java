@@ -20,5 +20,4 @@ public class p10_HipotenusaTriangulo {
         System.out.println(String.format("La longitud de la hipotenusa es de: %.2f", hip));
         System.out.println(String.format("Con el cateto 1 de: %.2f\nY con el cateto 2 de: %.2f", cat1, cat2));
     }
-    
 }
