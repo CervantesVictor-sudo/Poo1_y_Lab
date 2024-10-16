@@ -158,3 +158,6 @@
 
 ## Practica 11 - Repaso - Examen parcial 02
 - p112_ControlVentas
+
+## Segundo Examen Parcial
+- p113_SegundoExamenParcial
