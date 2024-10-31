@@ -11,6 +11,7 @@ public class p128_ExcepcionRaiz {
             System.out.print("Introduce un número : "); num = obj.nextFloat();
             raiz = Math.sqrt(num);
             System.out.println("El reultado es: " + raiz);
+            
         } catch (Exception e) { 
             System.out.println("ERROR - No puedo calcular la raíz cuadrada.");
         }
