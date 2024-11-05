@@ -21,7 +21,6 @@ public class p132_Archivos1 {
             System.out.println("Se puede escribir?    : " + arch.canWrite());
             System.out.println("Longitud del archivo  : " + arch.length());
             System.out.println("Fecha modificación    : " + arch.lastModified());
-            
         }
     }
 }

@@ -26,7 +26,6 @@ public class p134_Archivos3 {
 
                 } catch (Exception e) {
             }
-            
         } else System.out.println("No existe el archivo.");
     }
 }
