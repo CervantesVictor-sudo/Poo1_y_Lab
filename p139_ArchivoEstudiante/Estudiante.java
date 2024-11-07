@@ -3,8 +3,8 @@ package p139_ArchivoEstudiante;
 import java.io.Serializable;
 
 public class Estudiante implements Serializable {
-    private String Nombre;
-    private int Edad, Sexo;
+    private String Nombre, Sexo;
+    private int Edad;
     private double Promedio;
     public Estudiante() {}
 
@@ -26,10 +26,10 @@ public class Estudiante implements Serializable {
     public void setPromedio(double promedio) {
         Promedio = promedio;
     }
-    public int getSexo() {
+    public String getSexo() {
         return Sexo;
     }
-    public void setSexo(int sexo) {
+    public void setSexo(String sexo) {
         Sexo = sexo;
     }
     

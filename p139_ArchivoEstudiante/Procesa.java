@@ -15,10 +15,7 @@ public class Procesa {
             if ( estudiante.getNombre().isEmpty() ) break;
             System.out.print("Edad             : "); estudiante.setEdad( obj.nextInt() );
             System.out.print("Promedio         : "); estudiante.setPromedio( obj.nextDouble() );
-
-            System.out.print("\n[H]=1Sexo   : "); estudiante.setSexo( obj.nextInt() );
-            String sex = StringValueOf(estudiante.getSexo);
-
+            System.out.print("Sexo             : "); estudiante.setSexo( obj.nextLine().replace("h", "H") );
             datos.add(estudiante);
         }
     }

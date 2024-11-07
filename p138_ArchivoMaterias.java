@@ -35,8 +35,5 @@ public class p138_ArchivoMaterias {
         } else
             System.out.println("Las materias que ingresaste son:\n");
             System.out.println(materias);
-
-
-            
     }
 }

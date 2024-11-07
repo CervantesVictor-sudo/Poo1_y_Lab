@@ -22,9 +22,6 @@ public class p137_ArchivoMunicipios {
         } else
             System.out.println("El archivo ya existe... Esto contiene:\n");
             for (String dep : deportes) 
-                System.out.println(dep);
-
-
-                
+                System.out.println(dep);      
     }
 }
