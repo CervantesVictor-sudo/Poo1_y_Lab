@@ -22,5 +22,4 @@ public class p20_ConversionTipos {
         System.out.println(String.format("Manual con casting de long a int      : %d %d", var5, var6));
         System.out.println(String.format("Manual con casting de int a short     : %d %d", var7, var8));
     }
-    
 }

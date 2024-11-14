@@ -1,7 +1,6 @@
 // p18_TrabajandoConstantes - Trabajando con constantes numéricas.
 
 public class p18_TrabajandoConstantes {
-
     static final double DESCUENTO = 0.10;
     static final int VELOCIDADLUZ = 30000;
     static final float TASA = 0.5f;

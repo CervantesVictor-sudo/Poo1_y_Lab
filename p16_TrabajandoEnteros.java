@@ -2,6 +2,7 @@
 
 public class p16_TrabajandoEnteros {
     public static void main(String[] args) {
+        
         int num1 = 42;
         int num2 = 0x2A;
         int num3 = 0b00101010;

@@ -2,7 +2,6 @@
 
 public class p19_TrabajandoCaracteres {
     public static void main(String[] args) {
-        
         Character c1 = 'A', c2 = 'B';
         Character numero = '9';
         Character arroba = '@';

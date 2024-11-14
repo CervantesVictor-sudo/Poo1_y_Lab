@@ -142,6 +142,26 @@
 - p92_MayorMenor
 - p93_ParesImpares 
 
+## Actividad 15 - Clases y Objetos
+- p94_Empleado01
+- p95_Empleado02
+- p96_Empleado03
+- p97_Empleado04
+
+## Practica 8 - Clases y Objetos
+- p98_Circulo
+- p99_Rectangulo
+- p100_Articulo 
+
+## Actividad 16 - Composición
+- p101_TrabajoPersona
+- p102_AutorLibro
+- p103_ClienteFactura
+
+## Practica 9 - Composición
+- p104_PuntoCirculo
+- p105_PuntoTriangulo
+
 ## Actividad 17 - Herencia y Abstracción
 - p106_Persona
 - p107_Forma
