@@ -5,7 +5,6 @@
 import java.util.Scanner;
 
 public class p29_Calculadora {
-
     public static void main(String[] args) {
         double n1, n2;
         char op;

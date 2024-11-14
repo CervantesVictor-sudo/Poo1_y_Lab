@@ -7,6 +7,7 @@ import java.util.Scanner;
 
 public class p32_PagoEstacionamiento {
     public static void main(String[] args) {
+        
         float pago, total, imp;
         char est;
         Scanner obj = new Scanner(System.in);

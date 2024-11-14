@@ -6,7 +6,6 @@ import java.util.Scanner;
 
 public class p30_DiaSemana {
     public static void main(String[] args) {
-        
         System.out.print("\033[H\033[2J"); System.out.flush();
         System.out.println("Dame un número entre 1 y 7 y te dire el día de la semana con letra.\n");
         int dia = new Scanner(System.in).nextInt();
