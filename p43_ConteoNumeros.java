@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 public class p43_ConteoNumeros {
     public static void main(String[] args) {
+        
         int c, n, s, cp, cn, cc;
         Scanner obj = new Scanner(System.in);
         

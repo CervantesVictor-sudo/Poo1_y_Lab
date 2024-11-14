@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 public class p41_ProcesaCalificaciones {
     public static void main(String[] args) {
+        
         int  n, c;
         float cal, suma=0, prom=0;
         Scanner obj = new Scanner(System.in);
