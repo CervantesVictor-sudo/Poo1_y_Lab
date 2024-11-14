@@ -6,6 +6,7 @@ import java.util.Scanner;;
 
 public class p24_PagaTrabajadorv2 {
     public static void main(String[] args) {
+        
         int horas, extra;
         float paga, total;
         Scanner obj = new Scanner(System.in);

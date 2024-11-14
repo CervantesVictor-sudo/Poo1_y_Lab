@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class p23_ConvertirTemperaturas {
     public static void main(String[] args) {
-    char op;
+            char op;
             float temp, res;
             Scanner obj = new Scanner(System.in);
 

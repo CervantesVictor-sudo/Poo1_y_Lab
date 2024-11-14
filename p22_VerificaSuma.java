@@ -6,7 +6,6 @@ import java.util.Scanner;
 
 public class p22_VerificaSuma {
     public static void main(String[] args) {
-
         int n1, n2, n3;
         Scanner obj = new Scanner(System.in);
         System.out.print("\033[H\033[2J"); System.out.flush();
