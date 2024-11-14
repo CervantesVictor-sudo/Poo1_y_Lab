@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class p25_EstacionesAño {
     public static void main(String[] args) {
-        
         System.out.print("\033[H\033[2J"); System.out.flush();
         System.out.print("\nDame un número entre el 1 y el 4, y te diré qué estación del año es: \n");
         int n = new Scanner(System.in).nextInt();

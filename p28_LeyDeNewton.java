@@ -6,7 +6,6 @@
 import java.util.Scanner;
 
 public class p28_LeyDeNewton {
-
     public static void main(String[] args) {
         float f, m, a;
         char op;

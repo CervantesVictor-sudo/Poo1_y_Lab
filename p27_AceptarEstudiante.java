@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 public class p27_AceptarEstudiante {
     public static void main(String[] args) {
+        
         String nombre;
         int edad;
         double c1, c2;
