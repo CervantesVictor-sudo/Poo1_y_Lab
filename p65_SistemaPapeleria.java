@@ -13,7 +13,7 @@ public class p65_SistemaPapeleria {
         //Entradas
         Scanner obj = new Scanner(System.in);
         char resp, tipo;
-                //can=cantidad, sub=subtotal, car=carta, of=oficio, dob=doble oficio
+        //can=cantidad, sub=subtotal, car=carta, of=oficio, dob=doble oficio
         int v = 1, cancar=0, canof=0, candob=0, subcar=0, subof=0, subdob=0, cantotal=0, total;
         System.out.print("\033[H\033[2J"); System.out.flush();
         System.out.println("---------------------------------");
