@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 public class p63_SumaTerminos1 {
     public static void main(String[] args) {
+        
         Scanner obj = new Scanner(System.in);
         int n;
         float suma = 0;
