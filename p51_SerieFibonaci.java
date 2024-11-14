@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 public class p51_SerieFibonaci {
     public static void main(String[] args) {
+        
         Scanner obj = new Scanner(System.in);
         char  resp;
         int x, y, z, i, Max;

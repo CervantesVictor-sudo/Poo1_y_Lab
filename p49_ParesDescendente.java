@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 public class p49_ParesDescendente {
     public static void main(String[] args) {
+        
         Scanner obj = new Scanner(System.in);
         char resp;
         int con1, n, s, con2;

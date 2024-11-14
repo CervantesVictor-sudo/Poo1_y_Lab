@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 public class p50_ConversionTemperaturas {
     public static void main(String[] args) {
+        
         Scanner obj = new Scanner(System.in);
         char resp;
         float inicio, fin, cent, tc;

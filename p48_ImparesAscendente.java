@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 public class p48_ImparesAscendente {
     public static void main(String[] args) {
+        
         Scanner obj = new Scanner(System.in);
         char resp;
         int con,num,suma;
