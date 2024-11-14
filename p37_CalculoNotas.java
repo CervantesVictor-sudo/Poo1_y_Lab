@@ -7,6 +7,7 @@ import java.util.Scanner;
 
 public class p37_CalculoNotas {
     public static void main(String[] args) {
+        
         float prom, cal1, cal2, cal3, cal4, cal5;
         Scanner obj = new Scanner(System.in);
 

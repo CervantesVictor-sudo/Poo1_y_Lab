@@ -8,6 +8,7 @@ import java.util.Scanner;
 
 public class p38_AceptarEstudianteV2 {
     public static void main(String[] args) {
+        
         String nombre, sexo;
         int edad;
         double cal1, cal2, cal3, prom;

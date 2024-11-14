@@ -7,6 +7,7 @@ import java.util.Scanner;
 
 public class p33_NumerosConsecutivos {
         public static void main(String[] args) {
+            
             int n1, n2, n3;
             Scanner obj = new Scanner(System.in);
 

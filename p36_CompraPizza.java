@@ -9,6 +9,7 @@ import java.util.Scanner;
 
 public class p36_CompraPizza {
     public static void main(String[] args) {
+        
         float subtotal, precio, porcentaje;
         double desc, total;
         subtotal = 0;

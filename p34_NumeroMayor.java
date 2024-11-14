@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 public class p34_NumeroMayor {
     public static void main(String[] args) {
+        
         int n1, n2, n3;
         Scanner obj = new Scanner(System.in);
 

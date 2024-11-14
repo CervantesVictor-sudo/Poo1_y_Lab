@@ -8,7 +8,6 @@ import java.util.Scanner;
 
 public class p35_ContinentesMundo {
     public static void main(String[] args) {
-
         System.out.print("\033[H\033[2J"); System.out.flush();
         System.out.println("Dame un número entre 1 y 6 y te diré algún continente:\n");
         int cont = new Scanner(System.in).nextInt();
