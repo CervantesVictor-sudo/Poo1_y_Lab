@@ -214,5 +214,8 @@
 ## Actividad 25 - Interfaz gráfica Parte 2
 - p145_EstudianteGUI_V1
 
+## Actividad 26 - Interfaz Gráfica Parte 3
+- p146_EstudianteGUI_V2
+
 ## Tercer Examen Parcial
 - p147_TercerExamenParcial
