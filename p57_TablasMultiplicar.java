@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 public class p57_TablasMultiplicar {
     public static void main (String[] args) {
+        
         Scanner obj = new Scanner(System.in);
         boolean repite = true;
 
