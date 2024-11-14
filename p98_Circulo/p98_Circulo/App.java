@@ -5,8 +5,6 @@ public class App {
         System.out.print("\033[H\033[2J");
         Circulo c1 = new Circulo(10.40);
         System.out.println(c1);
-
-
         
         Circulo c2 = new Circulo();
         c2.setRadio(12.45);

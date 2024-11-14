@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class App {
     public static void main(String[] args) {
+        
         System.out.print("\033[H\033[2J");
         Articulo art1 = new Articulo("A101", "Pluma Roja", 888, 0.08);
         System.out.println(art1.toString());
