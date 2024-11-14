@@ -6,7 +6,6 @@ import java.util.Scanner;
 
 public class p45_ImparesDescendente {
     public static void main(String[] args) {
-        
         int n,c,s;
         char resp;
         Scanner obj = new Scanner(System.in);

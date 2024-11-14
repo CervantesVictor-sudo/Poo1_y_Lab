@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 public class p44_ParesAscendente {
     public static void main(String[] args) {
+        
         int c, n, s;
         char resp;
         Scanner obj = new Scanner(System.in);

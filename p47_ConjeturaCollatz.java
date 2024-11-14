@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 public class p47_ConjeturaCollatz {
     public static void main(String[] args) {
+        
         char resp;
         Scanner obj = new Scanner(System.in);
 
