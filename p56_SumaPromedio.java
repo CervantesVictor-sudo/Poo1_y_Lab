@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 public class p56_SumaPromedio {
     public static void main(String[] args) {
+        
         Scanner obj = new Scanner(System.in);
         float cal, suma, prom;
         int n;

@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 public class p54_ArribaAbajo {
     public static void main(String[] args) {
+        
         Scanner obj = new Scanner(System.in);
         int n, s = 0;
 

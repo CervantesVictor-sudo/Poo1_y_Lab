@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 public class p53_NumerosNa1 {
     public static void main(String[] args) {
+        
         int j, n, p;
         Scanner obj = new Scanner(System.in);
 
