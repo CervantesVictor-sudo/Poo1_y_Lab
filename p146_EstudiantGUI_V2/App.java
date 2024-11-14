@@ -109,6 +109,7 @@ public class App extends JFrame implements ActionListener {
             modelo.addRow(obj);
         }
     }
+    
     public static void main(String[] args) {
         App app = new App();
         app.setBounds(10,10,550, 400);
