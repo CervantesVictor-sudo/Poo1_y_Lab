@@ -1,23 +1,28 @@
 package p146_EstudiantGUI_V2;
 
 import javax.swing.*;
+import javax.swing.filechooser.FileNameExtensionFilter;
+
 import java.awt.*;
 import javax.swing.table.*;
 import java.awt.event.*;
+import java.io.File;
 import java.util.ArrayList;
 
 public class App extends JFrame implements ActionListener {
     ArrayList<Estudiante> datos;
     JMenuBar menuBar;
     JMenu mnuArchivo, mnuAyuda;
-    JMenuItem smnAbrir, smnSalir, smnAcercade, smnGuardar;
-    JPanel pnlTabla,pnlDatos;
+    JMenuItem smnAbrir,smnSalir, smnAcercade, smnGuardar;
+    JPanel pnlTabla,pnlDatos, pnlBotones;
     JDialog jdlAcercaDe;
     JLabel lblDatos,lblNombre,lblEdad,lblPeso,lblCorreo;
     JTextField txtNombre,txtEdad,txtPeso,txtCorreo;
     JScrollPane spane;
     JTable table;
     DefaultTableModel modelo;
+    JFileChooser fchArchivo;
+    JButton btnAgregar, btnGrabar;
 
     public App() {
         super("Datos de Estudiantes");
@@ -39,7 +44,7 @@ public class App extends JFrame implements ActionListener {
         menuBar.add(mnuAyuda);
         smnAcercade = new JMenuItem("Acerca de ..");
         mnuAyuda.add(smnAcercade);
-        smnAcercade.addActionListener(this); 
+        smnAcercade.addActionListener(this);
         // Se crea la barra de menú, los menús, y opciones de los submenús. Se agregan los métdodos de escucha para recibir los clics.
 
         jdlAcercaDe = new JDialog(this,"Acerca de ..");
@@ -50,22 +55,31 @@ public class App extends JFrame implements ActionListener {
         jdlAcercaDe.add(lblDatos); 
         // Creamos un cuadro de diálogo personalizado.
 
-        setLayout(new GridLayout(2, 1, 0, 0)); // Establecemos una distribución de grid para el JFrame de la App.
+        setLayout(new GridLayout(3, 1, 0, 0)); // Establecemos una distribución de grid para el JFrame de la App.
 
         pnlTabla = new JPanel();
-        getContentPane().add(pnlTabla);
+        pnlTabla.setLayout(new BoxLayout(pnlTabla,BoxLayout.X_AXIS));
+        add(pnlTabla);
         spane = new JScrollPane();
+        spane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
         pnlTabla.add(spane);
         table = new JTable();
         table.getTableHeader().setBackground(Color.yellow);
         table.getTableHeader().setForeground(Color.black);
-        spane.setViewportView(table); 
+        spane.setViewportView(table);
         // Se crea un panel para contener la tabla. Se crea una vista desplazable para contener la tabla, se cambia el color para el encabzado.
 
         modelo = new DefaultTableModel();
         modelo.setColumnIdentifiers(new String[]{"Nombre","Edad","Peso","Correo"});
         table.setModel(modelo); 
         // Se crea un modelo para la tabla, se establece el título de las columnas.
+
+        table.addMouseListener(new MouseAdapter() {
+            public void mousePressed(MouseEvent e) {
+                int ren = table.rowAtPoint(e.getPoint());
+                mostrarDatos(ren);
+            }
+        });
 
         pnlDatos = new JPanel();
         getContentPane().add(pnlDatos);
@@ -91,15 +105,21 @@ public class App extends JFrame implements ActionListener {
         pnlDatos.add(lblCorreo);
         pnlDatos.add(txtCorreo);
         // Se crea un panel para los datos, en un grid de 4 x 2, donde se colocan etiquetas y cuadros de texto.
+
+        pnlBotones = new JPanel();
+        btnAgregar = new JButton("Agregar");
+        btnAgregar.addActionListener(this);
+        pnlBotones.add(btnAgregar);
+        btnGrabar = new JButton("Grabar");
+        btnGrabar.setEnabled(false);
+        btnGrabar.addActionListener(this);
+        pnlBotones.add(btnGrabar);
+        add(pnlBotones);
     }
-    public void actionPerformed(ActionEvent e) { // Se crea método para responder a los eventos de los elementos del menú salir y acerca de.
-        if (e.getSource() == smnSalir) {
-            dispose();
-        } else if(e.getSource()== smnAcercade) {
-            jdlAcercaDe.setVisible(true);
-            }
-        }
+    
     public void cargarDatos() { // Se crea el método cargarDatos que llena de datos la tabla con los datos en el arreglo datos.
+        DefaultTableModel dm = (DefaultTableModel)table.getModel();
+        while(dm.getRowCount()>0) dm.removeRow(0);
         Object[] obj = new Object[4];
         for(int i=0; i<datos.size() ; i++) {
             obj[0] = datos.get(i).getNombre();
@@ -110,6 +130,88 @@ public class App extends JFrame implements ActionListener {
         }
     }
     
+    public void mostrarDatos(int ren) {
+        txtNombre.setText(datos.get(ren).getNombre());
+        txtEdad.setText(Integer.toString((datos.get(ren).getEdad())));
+        txtPeso.setText(Double.toString((datos.get(ren).getPeso())));
+        txtCorreo.setText(datos.get(ren).getCorreo());
+    }
+
+    public void activarCampos(boolean actdes) {
+        for (Component cp : pnlDatos.getComponents())
+            if(cp instanceof JTextField)
+                cp.setEnabled(actdes);
+    }
+
+    public void limpiarCampos() {
+        for (Component cp : pnlDatos.getComponents())
+            if(cp instanceof JTextField)
+                ((JTextField)cp).setText("");
+    }
+
+    public void guardarCampos() {
+        Estudiante est = new Estudiante();
+        est.setNombre( txtNombre.getText() );
+        est.setEdad( Integer.parseInt(txtEdad.getText() ));
+        est.setPeso( Double.parseDouble(txtPeso.getText()) );
+        est.setCorreo( txtCorreo.getText() );
+        datos.add(est);
+        cargarDatos();
+    }
+    
+    public void actionPerformed(ActionEvent e) {
+        if (e.getSource() == smnSalir) {
+            dispose();
+        } else if(e.getSource()== smnAcercade) {
+            jdlAcercaDe.setVisible(true);
+        } else if (e.getSource() == smnAbrir) {
+            fchArchivo = new JFileChooser();
+            fchArchivo.setCurrentDirectory(new File("."));
+            fchArchivo.setFileFilter(new FileNameExtensionFilter("Archivos de datos (.dat)", new String[]{"dat"}));
+            int res = fchArchivo.showOpenDialog(null);
+            File archivo = fchArchivo.getSelectedFile();
+            if (res == JFileChooser.APPROVE_OPTION) {
+                File arch = fchArchivo.getSelectedFile();
+                try {
+                    datos = Util.desSerializarDatos(arch.getName());
+                    this.cargarDatos();
+                } catch (Exception e2) {
+                    JOptionPane.showMessageDialog(this, "Error al procesar el archivo",
+                    "Error",JOptionPane.ERROR_MESSAGE);
+                }
+            }
+        } else if(e.getSource()== smnGuardar) {
+            fchArchivo = new JFileChooser();
+            fchArchivo.setFileFilter(new FileNameExtensionFilter("Archivos de datos (.dat)", new String[]{"dat"}));
+            fchArchivo.setCurrentDirectory(new File("."));
+            int res = fchArchivo.showSaveDialog(this);
+            File archivo = fchArchivo.getSelectedFile();
+            if (res == JFileChooser.APPROVE_OPTION) {
+                File arch = fchArchivo.getSelectedFile();
+                try {
+                    Util.serializarDatos(arch.getName(),datos);
+                    JOptionPane.showMessageDialog(this, "Datos Grabados en : " +
+                    arch.getName(),"Correcto" ,JOptionPane.INFORMATION_MESSAGE);
+                } catch (Exception e2) {
+                    JOptionPane.showMessageDialog(this, "Error al procesar el archivo",
+                    "Error",JOptionPane.ERROR_MESSAGE);
+                }
+            }
+        } else if(e.getSource()==btnAgregar) {
+            activarCampos(true);
+            limpiarCampos();
+            txtNombre.requestFocus();
+            btnAgregar.setEnabled(false);
+            btnGrabar.setEnabled(true);
+        } else if(e.getSource()==btnGrabar) {
+            guardarCampos();
+            limpiarCampos();
+            activarCampos(false);
+            btnGrabar.setEnabled(false);
+            btnAgregar.setEnabled(true);
+        }
+    }
+
     public static void main(String[] args) {
         App app = new App();
         app.setBounds(10,10,550, 400);
@@ -118,5 +220,6 @@ public class App extends JFrame implements ActionListener {
         app.setDefaultCloseOperation(EXIT_ON_CLOSE);
         app.datos=Util.inicializarDatos();
         app.cargarDatos();
+        app.activarCampos(false);
     }
 }

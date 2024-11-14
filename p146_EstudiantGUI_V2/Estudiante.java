@@ -1,40 +1,40 @@
 package p146_EstudiantGUI_V2;
 
 import java.io.Serializable;
-
 public class Estudiante implements Serializable {
     String Nombre;
     int Edad;
     double Peso;
     String Correo;
+    public Estudiante() {}
     public Estudiante(String nombre, int edad, double peso, String correo) {
-    Nombre = nombre;
-    Edad = edad;
-    Peso = peso;
-    Correo = correo;
+        Nombre = nombre;
+        Edad = edad;
+        Peso = peso;
+        Correo = correo;
     }
     public String getNombre() {
-    return Nombre;
+        return Nombre;
     }
     public void setNombre(String nombre) {
-    Nombre = nombre;
+        Nombre = nombre;
     }
     public int getEdad() {
-    return Edad;
+        return Edad;
     }
     public void setEdad(int edad) {
-    Edad = edad;
+        Edad = edad;
     }
     public double getPeso() {
-    return Peso;
+        return Peso;
     }
     public void setPeso(double peso) {
-    Peso = peso;
+        Peso = peso;
     }
     public String getCorreo() {
-    return Correo;
+        return Correo;
     }
     public void setCorreo(String correo) {
-    Correo = correo;
+        Correo = correo;
     }
 }
