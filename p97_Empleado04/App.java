@@ -3,6 +3,7 @@ package p97_Empleado04;
 import java.util.ArrayList;
 public class App {
     public static void main(String[] args) {
+        
         ArrayList<Empleado> empleados = new ArrayList<>();
         int h=0, m=0, c=0, s=0;
         Empleado empleado1 = new Empleado("Juan perez", 35, 'H', true);

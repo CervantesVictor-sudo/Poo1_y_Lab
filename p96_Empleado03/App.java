@@ -2,6 +2,7 @@ package p96_Empleado03;
 
 public class App {
     public static void main(String[] args) {
+        
         Empleado empleado1 = new Empleado("Juan perez", 25);
         Empleado empleado2 = new Empleado("AYAYA ayyy", 21);
         Empleado empleado3 = new Empleado();
