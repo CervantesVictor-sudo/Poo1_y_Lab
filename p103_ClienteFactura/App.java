@@ -10,14 +10,12 @@ public class App {
         Scanner obj = new Scanner(System.in);
         System.out.println("Dame las los datos y las factura del cliente");
         System.out.print("Id Factura: "); f.setId(obj.nextInt());
-            System.out.print("Monto: "); f.setMonto(obj.nextDouble());
-            System.out.print("Cliente Id: "); c.setId(obj.nextInt()); obj.nextLine();
-            System.out.print("Cliente Nombre: "); c.setNombre(obj.nextLine());
-            System.out.print("Cliente desc: "); c.setDescuento(obj.nextFloat());
-            f.setCliente(c);
-
-            return f;
-
+        System.out.print("Monto: "); f.setMonto(obj.nextDouble());
+        System.out.print("Cliente Id: "); c.setId(obj.nextInt()); obj.nextLine();
+        System.out.print("Cliente Nombre: "); c.setNombre(obj.nextLine());
+        System.out.print("Cliente desc: "); c.setDescuento(obj.nextFloat());
+        f.setCliente(c);
+        return f;
     }
     public static void main(String[] args) {
         ArrayList<Factura> facturas = new ArrayList<>();
